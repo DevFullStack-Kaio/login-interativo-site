@@ -1,0 +1,270 @@
+
+/* ==============================
+   1. CONFIGURAÇÕES GERAIS
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #080b09;
+    --surface: #111713;
+    --text: #f4f7f4;
+    --muted: #b0bdb3;
+    --green: #5bbe42;
+    --green-hover: #73d65a;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ==============================
+   2. CABEÇALHO
+============================== */
+
+.hero {
+    min-height: 85vh;
+    padding: 24px 8%;
+    background:
+        radial-gradient(
+            circle at 75% 35%,
+            rgba(91, 190, 66, 0.13),
+            transparent 35%
+        ),
+        var(--background);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: var(--green);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.github-link {
+    color: var(--text);
+    text-decoration: none;
+    border: 1px solid #39443b;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.github-link:hover {
+    border-color: var(--green);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 110px auto 70px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--green);
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-size: clamp(2.2rem, 5vw, 4.2rem);
+    line-height: 1.15;
+    margin-bottom: 24px;
+}
+
+.intro {
+    max-width: 650px;
+    margin: 0 auto 32px;
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+/* ==============================
+   3. BOTÕES
+============================== */
+
+.button {
+    display: inline-block;
+    background: var(--green);
+    color: #071006;
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition:
+        background 0.3s,
+        transform 0.3s;
+}
+
+.button:hover {
+    background: var(--green-hover);
+    transform: translateY(-2px);
+}
+
+/* ==============================
+   4. SEÇÕES
+============================== */
+
+.section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin-bottom: 16px;
+}
+
+.section-description {
+    color: var(--muted);
+    max-width: 650px;
+    margin: 0 auto 40px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.image-card {
+    background: var(--surface);
+    border: 1px solid #263128;
+    border-radius: 14px;
+    padding: 16px;
+    overflow: hidden;
+}
+
+.image-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.image-card figcaption {
+    color: var(--muted);
+    margin-top: 14px;
+}
+
+/* ==============================
+   5. GIF DE DEMONSTRAÇÃO
+============================== */
+
+.demo {
+    max-width: 850px;
+    margin: 65px auto 0;
+}
+
+.demo h3 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+}
+
+.demo-gif {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #354337;
+    border-radius: 12px;
+}
+
+/* ==============================
+   6. SOBRE E TECNOLOGIAS
+============================== */
+
+.about {
+    background: var(--surface);
+}
+
+.about > p:not(.eyebrow) {
+    max-width: 750px;
+    margin: 0 auto 28px;
+    color: var(--muted);
+}
+
+.tech-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 32px auto;
+}
+
+.tech-list span {
+    border: 1px solid #3c5940;
+    color: var(--green-hover);
+    background: #17231a;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+}
+
+/* ==============================
+   7. RODAPÉ
+============================== */
+
+.footer {
+    padding: 30px 8%;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.footer p + p {
+    margin-top: 5px;
+}
+
+/* ==============================
+   8. RESPONSIVIDADE
+============================== */
+
+@media (max-width: 700px) {
+    .hero {
+        min-height: auto;
+        padding: 24px 6%;
+    }
+
+    .hero-content {
+        margin: 85px auto;
+    }
+
+    .section {
+        padding: 60px 6%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        align-items: flex-start;
+    }
+
+    .github-link {
+        font-size: 0.9rem;
+    }
+}

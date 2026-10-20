@@ -1,0 +1,13 @@
+
+# Arquivos e pastas do sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Arquivos de configuração local
+.env
+.env.*
+!.env.example
+
+# Dependências do Node.js, caso existam
+node_modules/
